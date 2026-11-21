@@ -1,0 +1,498 @@
+{
+  "dataset": "mave",
+  "voters": [
+    "crf",
+    "deberta"
+  ],
+  "selected_thresholds": {
+    "head": 1,
+    "medium": 1,
+    "tail": 1,
+    "extreme_tail": 1
+  },
+  "band_definition": "training span counts: head >100, medium 20-100, tail 5-19, extreme_tail <5",
+  "band_sizes": {
+    "medium": 9,
+    "head": 13,
+    "tail": 2,
+    "extreme_tail": 1
+  },
+  "validation": {
+    "DeBERTa": {
+      "42": {
+        "precision": 0.79479932165065,
+        "recall": 0.8652307692307692,
+        "micro_f1": 0.8285209192692988,
+        "macro_f1": 0.7087217034752156
+      },
+      "43": {
+        "precision": 0.7802495930548019,
+        "recall": 0.8849230769230769,
+        "micro_f1": 0.8292964244521338,
+        "macro_f1": 0.740135526465156
+      },
+      "44": {
+        "precision": 0.7653006918573709,
+        "recall": 0.8849230769230769,
+        "micro_f1": 0.8207762557077626,
+        "macro_f1": 0.7186169663905707
+      },
+      "mean_micro_f1": 0.8261978664763984
+    },
+    "CRF": {
+      "42": {
+        "precision": 0.8013406459475929,
+        "recall": 0.8092307692307692,
+        "micro_f1": 0.80526638089406,
+        "macro_f1": 0.6880007555903394
+      },
+      "mean_micro_f1": 0.80526638089406
+    },
+    "Committee_majority": {
+      "42": {
+        "precision": 0.855755894590846,
+        "recall": 0.7593846153846154,
+        "micro_f1": 0.8046951418324095,
+        "macro_f1": 0.6578920271315085
+      },
+      "43": {
+        "precision": 0.8509189925119128,
+        "recall": 0.7692307692307693,
+        "micro_f1": 0.8080155138978669,
+        "macro_f1": 0.6623022763062337
+      },
+      "44": {
+        "precision": 0.8475033738191633,
+        "recall": 0.7729230769230769,
+        "micro_f1": 0.8084969423881558,
+        "macro_f1": 0.6597399718555489
+      },
+      "mean_micro_f1": 0.8070691993728107
+    },
+    "CPEC_committee": {
+      "42": {
+        "precision": 0.7697954902988988,
+        "recall": 0.9033846153846153,
+        "micro_f1": 0.8312570781426953,
+        "macro_f1": 0.7160946016361781
+      },
+      "43": {
+        "precision": 0.759079283887468,
+        "recall": 0.9132307692307692,
+        "micro_f1": 0.829050279329609,
+        "macro_f1": 0.7402087544894992
+      },
+      "44": {
+        "precision": 0.7503805175038052,
+        "recall": 0.9101538461538462,
+        "micro_f1": 0.8225806451612905,
+        "macro_f1": 0.7226501406876108
+      },
+      "mean_micro_f1": 0.8276293342111982
+    }
+  },
+  "test": {
+    "DeBERTa": {
+      "42": {
+        "precision": 0.8016241299303944,
+        "recall": 0.8735777496839444,
+        "micro_f1": 0.8360556563823353,
+        "macro_f1": 0.7641767073978648
+      },
+      "43": {
+        "precision": 0.8012672811059908,
+        "recall": 0.8792667509481669,
+        "micro_f1": 0.838456901748041,
+        "macro_f1": 0.766372823702599
+      },
+      "44": {
+        "precision": 0.8021603183627061,
+        "recall": 0.8919089759797725,
+        "micro_f1": 0.8446572882370548,
+        "macro_f1": 0.7651534304839767
+      },
+      "mean_micro_f1": 0.839723282122477
+    },
+    "CRF": {
+      "42": {
+        "precision": 0.8122605363984674,
+        "recall": 0.8040455120101138,
+        "micro_f1": 0.8081321473951715,
+        "macro_f1": 0.6772228279092197
+      },
+      "mean_micro_f1": 0.8081321473951715
+    },
+    "Committee_majority": {
+      "42": {
+        "precision": 0.8613295210864903,
+        "recall": 0.7616940581542352,
+        "micro_f1": 0.8084535390808454,
+        "macro_f1": 0.6831573853212385
+      },
+      "43": {
+        "precision": 0.8635714285714285,
+        "recall": 0.7642225031605563,
+        "micro_f1": 0.8108651911468813,
+        "macro_f1": 0.6810815568809266
+      },
+      "44": {
+        "precision": 0.8631875881523272,
+        "recall": 0.7737041719342604,
+        "micro_f1": 0.816,
+        "macro_f1": 0.6880602458148459
+      },
+      "mean_micro_f1": 0.8117729100759089
+    },
+    "CPEC_committee": {
+      "42": {
+        "precision": 0.7802077638053582,
+        "recall": 0.9020227560050569,
+        "micro_f1": 0.8367047786572852,
+        "macro_f1": 0.7584226766139253
+      },
+      "43": {
+        "precision": 0.7760303687635575,
+        "recall": 0.904551201011378,
+        "micro_f1": 0.8353765323992994,
+        "macro_f1": 0.7605066559901544
+      },
+      "44": {
+        "precision": 0.7768773635872501,
+        "recall": 0.9089759797724399,
+        "micro_f1": 0.8377512379842703,
+        "macro_f1": 0.7535285565515571
+      },
+      "mean_micro_f1": 0.836610849680285
+    },
+    "_error_profile": {
+      "42": {
+        "DeBERTa": {
+          "correct": 1382,
+          "missed": 144,
+          "spurious": 280,
+          "wrong_attribute": 29,
+          "boundary": 33
+        },
+        "CPEC_committee": {
+          "correct": 1427,
+          "spurious": 348,
+          "missed": 104,
+          "wrong_attribute": 29,
+          "boundary": 25
+        }
+      },
+      "43": {
+        "DeBERTa": {
+          "correct": 1391,
+          "spurious": 292,
+          "missed": 140,
+          "wrong_attribute": 28,
+          "boundary": 25
+        },
+        "CPEC_committee": {
+          "correct": 1431,
+          "spurious": 361,
+          "missed": 97,
+          "wrong_attribute": 28,
+          "boundary": 24
+        }
+      },
+      "44": {
+        "DeBERTa": {
+          "correct": 1411,
+          "spurious": 290,
+          "missed": 117,
+          "wrong_attribute": 30,
+          "boundary": 28
+        },
+        "CPEC_committee": {
+          "correct": 1438,
+          "spurious": 358,
+          "missed": 89,
+          "wrong_attribute": 29,
+          "boundary": 26
+        }
+      }
+    },
+    "_bands": {
+      "42": {
+        "DeBERTa": {
+          "head": {
+            "precision": 0.8034026465028355,
+            "recall": 0.880524861878453,
+            "micro_f1": 0.8401976935749588,
+            "macro_f1": 0.8120861567706557,
+            "support": 1448
+          },
+          "medium": {
+            "precision": 0.7894736842105263,
+            "recall": 0.8076923076923077,
+            "micro_f1": 0.7984790874524715,
+            "macro_f1": 0.7907171414292854,
+            "support": 130
+          },
+          "tail": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "micro_f1": 0.6666666666666666,
+            "macro_f1": 0.6666666666666666,
+            "support": 2
+          },
+          "extreme_tail": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "micro_f1": 0.0,
+            "macro_f1": 0.0,
+            "support": 2
+          }
+        },
+        "CPEC_committee": {
+          "head": {
+            "precision": 0.7833333333333333,
+            "recall": 0.9088397790055248,
+            "micro_f1": 0.8414322250639386,
+            "macro_f1": 0.8073511762589066,
+            "support": 1448
+          },
+          "medium": {
+            "precision": 0.7517241379310344,
+            "recall": 0.8384615384615385,
+            "micro_f1": 0.7927272727272726,
+            "macro_f1": 0.7822124756335282,
+            "support": 130
+          },
+          "tail": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "micro_f1": 0.6666666666666666,
+            "macro_f1": 0.6666666666666666,
+            "support": 2
+          },
+          "extreme_tail": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "micro_f1": 0.0,
+            "macro_f1": 0.0,
+            "support": 2
+          }
+        }
+      },
+      "43": {
+        "DeBERTa": {
+          "head": {
+            "precision": 0.8025078369905956,
+            "recall": 0.8839779005524862,
+            "micro_f1": 0.8412750575090371,
+            "macro_f1": 0.8112857761125173,
+            "support": 1448
+          },
+          "medium": {
+            "precision": 0.7956204379562044,
+            "recall": 0.8384615384615385,
+            "micro_f1": 0.8164794007490638,
+            "macro_f1": 0.7977295569703313,
+            "support": 130
+          },
+          "tail": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "micro_f1": 0.6666666666666666,
+            "macro_f1": 0.6666666666666666,
+            "support": 2
+          },
+          "extreme_tail": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "micro_f1": 0.0,
+            "macro_f1": 0.0,
+            "support": 2
+          }
+        },
+        "CPEC_committee": {
+          "head": {
+            "precision": 0.7781710914454277,
+            "recall": 0.9109116022099447,
+            "micro_f1": 0.8393254852052179,
+            "macro_f1": 0.8088562362825067,
+            "support": 1448
+          },
+          "medium": {
+            "precision": 0.7586206896551724,
+            "recall": 0.8461538461538461,
+            "micro_f1": 0.8,
+            "macro_f1": 0.7855957783804944,
+            "support": 130
+          },
+          "tail": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "micro_f1": 0.6666666666666666,
+            "macro_f1": 0.6666666666666666,
+            "support": 2
+          },
+          "extreme_tail": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "micro_f1": 0.0,
+            "macro_f1": 0.0,
+            "support": 2
+          }
+        }
+      },
+      "44": {
+        "DeBERTa": {
+          "head": {
+            "precision": 0.8033292231812577,
+            "recall": 0.8998618784530387,
+            "micro_f1": 0.8488599348534202,
+            "macro_f1": 0.8170675388994473,
+            "support": 1448
+          },
+          "medium": {
+            "precision": 0.7969924812030075,
+            "recall": 0.8153846153846154,
+            "micro_f1": 0.8060836501901141,
+            "macro_f1": 0.7861264065839951,
+            "support": 130
+          },
+          "tail": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "micro_f1": 0.6666666666666666,
+            "macro_f1": 0.6666666666666666,
+            "support": 2
+          },
+          "extreme_tail": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "micro_f1": 0.0,
+            "macro_f1": 0.0,
+            "support": 2
+          }
+        },
+        "CPEC_committee": {
+          "head": {
+            "precision": 0.7794721407624633,
+            "recall": 0.9178176795580111,
+            "micro_f1": 0.8430066603235015,
+            "macro_f1": 0.8119057555667826,
+            "support": 1448
+          },
+          "medium": {
+            "precision": 0.7535211267605634,
+            "recall": 0.823076923076923,
+            "micro_f1": 0.786764705882353,
+            "macro_f1": 0.7625826520225034,
+            "support": 130
+          },
+          "tail": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "micro_f1": 0.6666666666666666,
+            "macro_f1": 0.6666666666666666,
+            "support": 2
+          },
+          "extreme_tail": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "micro_f1": 0.0,
+            "macro_f1": 0.0,
+            "support": 2
+          }
+        }
+      }
+    }
+  },
+  "selection_table": [
+    {
+      "f1": 0.8276293342111982,
+      "tau": {
+        "head": 1,
+        "medium": 1,
+        "tail": 1,
+        "extreme_tail": 1
+      }
+    },
+    {
+      "f1": 0.8276293342111982,
+      "tau": {
+        "head": 1,
+        "medium": 1,
+        "tail": 1,
+        "extreme_tail": 2
+      }
+    },
+    {
+      "f1": 0.8275775381675349,
+      "tau": {
+        "head": 1,
+        "medium": 1,
+        "tail": 2,
+        "extreme_tail": 1
+      }
+    },
+    {
+      "f1": 0.8275775381675349,
+      "tau": {
+        "head": 1,
+        "medium": 1,
+        "tail": 2,
+        "extreme_tail": 2
+      }
+    },
+    {
+      "f1": 0.8256842258905198,
+      "tau": {
+        "head": 1,
+        "medium": 2,
+        "tail": 1,
+        "extreme_tail": 1
+      }
+    },
+    {
+      "f1": 0.8256842258905198,
+      "tau": {
+        "head": 1,
+        "medium": 2,
+        "tail": 1,
+        "extreme_tail": 2
+      }
+    },
+    {
+      "f1": 0.825629821305751,
+      "tau": {
+        "head": 1,
+        "medium": 2,
+        "tail": 2,
+        "extreme_tail": 1
+      }
+    },
+    {
+      "f1": 0.825629821305751,
+      "tau": {
+        "head": 1,
+        "medium": 2,
+        "tail": 2,
+        "extreme_tail": 2
+      }
+    },
+    {
+      "f1": 0.8086859855813348,
+      "tau": {
+        "head": 2,
+        "medium": 1,
+        "tail": 1,
+        "extreme_tail": 1
+      }
+    },
+    {
+      "f1": 0.8086859855813348,
+      "tau": {
+        "head": 2,
+        "medium": 1,
+        "tail": 1,
+        "extreme_tail": 2
+      }
+    }
+  ]
+}

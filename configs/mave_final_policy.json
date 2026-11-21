@@ -1,0 +1,15 @@
+{
+  "dataset": "MAVE custom pilot_v2",
+  "training_splits": ["train", "val"],
+  "evaluation_split": "test",
+  "deberta_seeds": [42, 43, 44],
+  "epochs": 10,
+  "epoch_rule": "Median of development best epochs 10, 13, 6; fixed before test evaluation",
+  "checkpoint_rule": "Final epoch only; no early stopping or test-based selection",
+  "schedule": "Linear decay across the fixed 10-epoch final training budget; no warmup",
+  "deberta_config": "configs/mave_deberta_baseline.json",
+  "crf_config": "configs/mave_crf_baseline.json",
+  "frequency_reference": "Original training split positive entity spans; same thresholds as development",
+  "reporting": "Report every seed and mean/sample standard deviation; do not select a seed by test score",
+  "test_policy": "Load test only after all final models are trained; evaluate once per model; no test-driven tuning"
+}

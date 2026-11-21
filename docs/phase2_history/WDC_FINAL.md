@@ -1,0 +1,15 @@
+# WDC-PAVE final evaluation protocol
+
+Completed 10 October 2026: job `387830` exited 0 after 11m42s. BERT official test micro F1 for seeds 42/43/44 is 83.25%/82.95%/83.26%, mean 83.15%, sample standard deviation 0.18 percentage points. DeBERTa scores 85.55%/86.23%/85.53%, mean 85.77%, sample standard deviation 0.40 percentage points. Independent saved-prediction identity/gold, exact metrics, fixed epoch histories and aggregate checks passed. Results are in `artifacts/wdc_final_20261010_085407_387830/summary.md` and each model's `test_results.json`. The historical CRF reference is unchanged. No test-based checkpoint or seed selection occurred.
+
+Frozen on 10 October 2026 before Transformer official test predictions.
+
+Both selected models retrain from pretrained weights on the combined 906 training and 160 validation products (1,066 products). The preserved 354-product official test split is held out from training and checkpoint selection. Existing CRF test micro F1 79.34% is a historical reference, not a newly retrained baseline.
+
+The fixed epoch budget is the median best development epoch across the predetermined seeds: BERT 14 epochs from 11/14/15; DeBERTa 15 epochs from 15/12/15. Each model runs seeds 42, 43 and 44 with LR 5e-5, batch 16, weight decay 0.01, first-subword supervision, no warmup and linear decay over its fixed epoch budget. Only the final checkpoint is evaluated, with no early stopping. Report all seeds and their mean/sample standard deviation; do not choose a seed from test results.
+
+BERT final runs pin cached revision `86b5e0934494bd15c9632b12f734a8a67f723594`; the historical BERT development study did not record a pinned revision. DeBERTa keeps revision `8ccc9b6f36199bec6961081d44eb72fb3f7353f3`. Model settings, source hashes and frozen dataset hashes are saved in `configs/wdc_final_policy.json` and each run's protocol record. Label inventory and frequency groups use original training data; no test-driven schema changes. Preflight checks confirmed the preserved splits' BIO/schema compatibility without model evaluation.
+
+`scripts/wdc_final.sbatch` runs BERT then DeBERTa sequentially. For each family, all three final models finish training before test inference. `scripts/wdc_final.py` checks frozen dataset hashes, product/cluster separation, token coverage, no truncation, prediction identity/alignment, exact entity metrics, and independent seqeval agreement. Reports include attribute/source/category/frequency/error breakdowns. `scripts/summarize_wdc_final.py` independently recomputes saved prediction metrics, checks fixed epoch histories and aggregate statistics, and writes a combined report.
+
+Small records stay under `artifacts/wdc_final_TIMESTAMP_JOBID/`; final checkpoints stay in the matching `/scratch/csisnlp_09/models/` directory. The processed gold uses annotation-assisted token boundaries, so these scores describe the BIO benchmark rather than raw-input deployment behavior. The frozen test scores must not be used for further tuning.

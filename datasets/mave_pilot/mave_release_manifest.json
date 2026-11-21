@@ -1,0 +1,40 @@
+{
+  "repository": "https://github.com/google-research-datasets/MAVE",
+  "revision": "f84cefbd71578d4a84a70664ebdfc8f09b62910e",
+  "files": {
+    "README.md": {
+      "path": "/scratch/csisnlp_09/data/mave/raw/upstream/README.md",
+      "bytes": 5780,
+      "sha256": "6b58b47cb23577bfdb0890e5d3bd689e44c0a359480008865847acb2eff7bc8e"
+    },
+    "LICENSE": {
+      "path": "/scratch/csisnlp_09/data/mave/raw/upstream/LICENSE",
+      "bytes": 19347,
+      "sha256": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0"
+    },
+    "clean_amazon_product_metadata_main.py": {
+      "path": "/scratch/csisnlp_09/data/mave/raw/upstream/clean_amazon_product_metadata_main.py",
+      "bytes": 9504,
+      "sha256": "7c8e4969e34d08bbac5c1df7e04ba8d1b88725de84e88eaa745a569b74d9725e"
+    },
+    "requirements.txt": {
+      "path": "/scratch/csisnlp_09/data/mave/raw/upstream/requirements.txt",
+      "bytes": 58,
+      "sha256": "eeca6172b9dfed2eb0f9ee880f11c39b5ded81b6960bb973deb5a32f86480c09"
+    },
+    "mave_positives_labels.jsonl": {
+      "path": "/scratch/csisnlp_09/data/mave/raw/mave_positives_labels.jsonl",
+      "bytes": 744855753,
+      "sha256": "2338610c0d6cbbd7247786d942a3e13c0938b903f3cc75ffa77cd98d0d4b2187",
+      "verified": true
+    },
+    "mave_negatives_labels.jsonl": {
+      "path": "/scratch/csisnlp_09/data/mave/raw/mave_negatives_labels.jsonl",
+      "bytes": 154939405,
+      "sha256": "9b20f4448b6301a5fb4885d6d1436983258b22c4e6de6dab86a748e366fd1ed1",
+      "verified": true
+    }
+  },
+  "status": "labels_verified_metadata_pending",
+  "paragraphs_available": false
+}

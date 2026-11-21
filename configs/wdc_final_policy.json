@@ -1,0 +1,80 @@
+{
+  "bert": {
+    "dataset": "WDC-PAVE official benchmark",
+    "config": {
+      "model": "google-bert/bert-base-uncased",
+      "learning_rate": 5e-05,
+      "batch_size": 16,
+      "epochs": 14,
+      "weight_decay": 0.01,
+      "seed": 42,
+      "max_length": 512,
+      "subword_supervision": "first_subword_only",
+      "selection_metric": "validation_entity_micro_f1",
+      "status": "selected_on_validation_seed_42_confirmed_at_seeds_43_44",
+      "early_stopping_patience": 0,
+      "revision": "86b5e0934494bd15c9632b12f734a8a67f723594"
+    },
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "epochs": 14,
+    "development_summary": "artifacts/bert_lr_study_20261009/summary.json",
+    "dataset_sha256": {
+      "train": "d13f8c197f9383cbc4a06781407949d6011e698cc4630c564c29d3ed9ec69c3c",
+      "val": "3d42aaef89e4e2865426989a367638fb6ef1d4f5972344da8e28fa2a836e57bd",
+      "test": "b4f7b2a0125c0737e16c8d298713b25c1ee2f086b1d504997b4d2d95df9f4760"
+    },
+    "training_splits": [
+      "train",
+      "val"
+    ],
+    "evaluation_split": "test",
+    "checkpoint_rule": "Final epoch only; no early stopping or test selection",
+    "epoch_rule": "Median best epoch of selected development configuration across seeds 42/43/44",
+    "schedule": "Linear decay over fixed final epoch budget; no warmup",
+    "reporting": "All seeds, mean and sample standard deviation; existing CRF test result 0.7934 is historical reference, not newly retrained",
+    "frequency_reference": "Original training positive entity spans; same development thresholds"
+  },
+  "deberta": {
+    "dataset": "WDC-PAVE official benchmark",
+    "config": {
+      "model": "microsoft/deberta-v3-base",
+      "learning_rate": 5e-05,
+      "batch_size": 16,
+      "epochs": 15,
+      "weight_decay": 0.01,
+      "seed": 42,
+      "max_length": 512,
+      "subword_supervision": "first_subword_only",
+      "selection_metric": "validation_entity_micro_f1",
+      "early_stopping_patience": 0,
+      "status": "selected_on_validation_seed_42_confirmed_at_seeds_43_44",
+      "revision": "8ccc9b6f36199bec6961081d44eb72fb3f7353f3"
+    },
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "epochs": 15,
+    "development_summary": "artifacts/deberta_study_20261009_154943_386761/summary.json",
+    "dataset_sha256": {
+      "train": "d13f8c197f9383cbc4a06781407949d6011e698cc4630c564c29d3ed9ec69c3c",
+      "val": "3d42aaef89e4e2865426989a367638fb6ef1d4f5972344da8e28fa2a836e57bd",
+      "test": "b4f7b2a0125c0737e16c8d298713b25c1ee2f086b1d504997b4d2d95df9f4760"
+    },
+    "training_splits": [
+      "train",
+      "val"
+    ],
+    "evaluation_split": "test",
+    "checkpoint_rule": "Final epoch only; no early stopping or test selection",
+    "epoch_rule": "Median best epoch of selected development configuration across seeds 42/43/44",
+    "schedule": "Linear decay over fixed final epoch budget; no warmup",
+    "reporting": "All seeds, mean and sample standard deviation; existing CRF test result 0.7934 is historical reference, not newly retrained",
+    "frequency_reference": "Original training positive entity spans; same development thresholds"
+  }
+}

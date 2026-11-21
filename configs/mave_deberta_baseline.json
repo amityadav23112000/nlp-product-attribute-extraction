@@ -1,0 +1,15 @@
+{
+  "model": "microsoft/deberta-v3-base",
+  "revision": "8ccc9b6f36199bec6961081d44eb72fb3f7353f3",
+  "learning_rate": 0.00005,
+  "batch_size": 16,
+  "epochs": 15,
+  "weight_decay": 0.01,
+  "seed": 42,
+  "max_length": 512,
+  "subword_supervision": "first_subword_only",
+  "selection_metric": "validation_entity_micro_f1",
+  "early_stopping_patience": 3,
+  "crf_validation_micro_f1": 0.80526638089406,
+  "status": "MAVE single-run development baseline; settings transferred from selected WDC DeBERTa; no MAVE hyperparameter search"
+}

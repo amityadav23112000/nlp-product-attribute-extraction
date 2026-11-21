@@ -1,0 +1,8 @@
+{
+  "selection_metric": "post_verification.micro_f1",
+  "mode_order": ["zero_shot", "schema_guided", "one_shot", "three_shot"],
+  "selection_rule": "Highest validation post-verification exact pair micro F1; exact ties favor earlier mode_order entry",
+  "test_scope": {"wdc": 354, "mave": 716},
+  "test_policy": "One selected prompt per dataset; all held-out products; no test-based prompt or checkpoint selection",
+  "normalization": "deferred"
+}

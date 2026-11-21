@@ -1,0 +1,1 @@
+{"model":"Qwen/Qwen3-4B-Instruct-2507","revision":"cdbee75f17c01a7cc42f958dc650907174af0554","mode":"schema_guided","seed":42,"batch_size":1,"do_sample":false,"max_new_tokens":768,"max_context_tokens":12288}

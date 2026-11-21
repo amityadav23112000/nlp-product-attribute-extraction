@@ -1,0 +1,267 @@
+{
+  "status": "prepared",
+  "config": {
+    "dataset": "MAVE",
+    "seed": 42,
+    "category_count": 5,
+    "categories": [],
+    "minimum_products_per_category": 200,
+    "maximum_products_per_category": 1000,
+    "candidate_multiplier": 3,
+    "split_fractions": {
+      "train": 0.7,
+      "val": 0.15,
+      "test": 0.15
+    },
+    "selection": "smallest SHA-256 ranks among valid reconstructed products within each category",
+    "category_selection": "top categories by positive-label product count before metadata reconstruction unless explicitly listed",
+    "split_unit": "connected product groups formed from exact cleaned-text duplicates and parent ASIN when available",
+    "sources": [
+      "title",
+      "description",
+      "feature",
+      "price",
+      "brand"
+    ],
+    "positive_and_negative_labels": "merge by product ID; retain explicit empty evidence lists",
+    "invalid_evidence_policy": "exclude product and report the reason; no fuzzy offset repair",
+    "overlap_policy": "flat BIO: prefer longer spans, then attribute name; log rejected annotations",
+    "tokenization": "preserved benchmark regex with evidence-boundary splitting; gold-assisted benchmark only",
+    "sequence_length_policy": "exclude whole products if any paragraph exceeds 512 subwords for either cached BERT or DeBERTa; report exclusions",
+    "length_check_configs": [
+      "configs/bert_selected.json",
+      "configs/deberta_selected.json"
+    ],
+    "evaluation": "custom reproducible subset, not the original published MAVE benchmark splits",
+    "status": "initial_preparation_protocol_pending_metadata"
+  },
+  "categories": [
+    "Shoes",
+    "Shirts & Tops",
+    "Watches",
+    "Books",
+    "Dresses"
+  ],
+  "category_positive_label_counts": {
+    "Shoes": 387068,
+    "Shirts & Tops": 147605,
+    "Watches": 66296,
+    "Books": 63582,
+    "Dresses": 61318
+  },
+  "candidate_products": 15000,
+  "upstream_revision": "f84cefbd71578d4a84a70664ebdfc8f09b62910e",
+  "cleaner_sha256": "7c8e4969e34d08bbac5c1df7e04ba8d1b88725de84e88eaa745a569b74d9725e",
+  "metadata_sha256": "05f8c71ad51a1112c8cbcfc49040fe06f507d3013fd027e0a4f9fbab6c8419df",
+  "label_sha256": {
+    "positive": "2338610c0d6cbbd7247786d942a3e13c0938b903f3cc75ffa77cd98d0d4b2187",
+    "negative": "9b20f4448b6301a5fb4885d6d1436983258b22c4e6de6dab86a748e366fd1ed1"
+  },
+  "config_sha256": "917644c0c1b45aafc40b4404a5e2e19ec4c9ec22313314cc97a936d43696820e",
+  "index_provenance_source": "completed_source_profile_with_verified_database_counts",
+  "preparation_script_sha256": "9ebdefee2e61e24ac90dada811f3423b07ac95680e4bdbb94401fe39a15f9777",
+  "mave_adapter_sha256": "fd2b4d3681a89b087dd0464ab79a407dbb7b2f9619be46ec3f2b15c5b744c84d",
+  "versions": {
+    "python": "3.11.17 (main, Oct  1 2026, 20:17:42) [GCC 14.3.0]",
+    "beautifulsoup4": "4.15.0"
+  },
+  "length_check_tokenizers": [
+    {
+      "model": "google-bert/bert-base-uncased",
+      "revision": null,
+      "class": "BertTokenizerFast",
+      "backend_sha256": "9114256b104cca80e04367526f03f46aa3c443c2ed174904142a73bbf13b9fbb"
+    },
+    {
+      "model": "microsoft/deberta-v3-base",
+      "revision": "8ccc9b6f36199bec6961081d44eb72fb3f7353f3",
+      "class": "DebertaV2TokenizerFast",
+      "backend_sha256": "a2ddc2fb79f39875f15ddc279b79387c8e17997a251f3713fe0b0f21a86e50a6"
+    }
+  ],
+  "metadata_gzip_layers": 2,
+  "counts": {
+    "metadata_lines": 15023059,
+    "candidate_metadata_rows": 15021,
+    "valid_candidates": 14725,
+    "duplicate_candidate_metadata_rows": 21
+  },
+  "exclusions": {
+    "over_512_subwords:google-bert/bert-base-uncased": 267,
+    "Evidence value differs from cleaned text at its offsets": 1,
+    "tokenizer_dropped_words:google-bert/bert-base-uncased": 7
+  },
+  "cleaning_counts": {
+    "num-paragraphs": 183743,
+    "num-paragraph-html-cleaned": 81558,
+    "num-output-documents": 15000,
+    "num-paragraph-empty-after-whitespace-removed": 784,
+    "num-paragraph-html-after-all-clean": 2,
+    "num-paragraph-is-css-removed": 23
+  },
+  "candidate_ids_without_cleaned_metadata": 0,
+  "splits": {
+    "train": {
+      "sequences": 43302,
+      "products": 3548,
+      "tokens": 743574,
+      "unknown_labels": {},
+      "length_errors": 0,
+      "bio_errors": 0,
+      "clusters": 3546,
+      "positive_span_counts": {
+        "FICTION_FORM": 664,
+        "TYPE": 1424,
+        "FORMAT": 97,
+        "REFERENCE_TYPE": 91,
+        "PAGE_COUNT": 6,
+        "WATCH_MOVEMENT": 1164,
+        "DISPLAY": 468,
+        "SILHOUETTE": 176,
+        "STYLE": 168,
+        "SLEEVE_STYLE": 1380,
+        "HEEL_STYLE": 85,
+        "MECHANICAL_MOVEMENT": 220,
+        "LENGTH": 529,
+        "NECKLINE": 684,
+        "PATTERN": 418,
+        "ATHLETIC_SHOE_STYLE": 157,
+        "SHAFT_HEIGHT": 80,
+        "HEEL_HEIGHT": 117,
+        "FASTENING_STYLE": 60,
+        "BOOT_STYLE": 33,
+        "SHOULDER_STYLE": 49,
+        "ACTIVE_STYLE": 23,
+        "TOE_STYLE": 44,
+        "DANCE_SHOE_STYLE": 10,
+        "SANDAL_STYLE": 3
+      },
+      "category_products": {
+        "Books": 732,
+        "Watches": 727,
+        "Shoes": 698,
+        "Shirts & Tops": 698,
+        "Dresses": 693
+      },
+      "source_sequences": {
+        "title": 3548,
+        "description": 5587,
+        "brand": 2655,
+        "price": 1344,
+        "feature": 30168
+      }
+    },
+    "val": {
+      "sequences": 8789,
+      "products": 736,
+      "tokens": 150642,
+      "unknown_labels": {},
+      "length_errors": 0,
+      "bio_errors": 0,
+      "clusters": 736,
+      "positive_span_counts": {
+        "FICTION_FORM": 118,
+        "TYPE": 267,
+        "REFERENCE_TYPE": 23,
+        "FORMAT": 30,
+        "PAGE_COUNT": 2,
+        "WATCH_MOVEMENT": 214,
+        "DISPLAY": 66,
+        "STYLE": 29,
+        "TOE_STYLE": 9,
+        "SILHOUETTE": 26,
+        "ATHLETIC_SHOE_STYLE": 34,
+        "HEEL_STYLE": 21,
+        "MECHANICAL_MOVEMENT": 70,
+        "SHAFT_HEIGHT": 28,
+        "SLEEVE_STYLE": 306,
+        "NECKLINE": 150,
+        "FASTENING_STYLE": 4,
+        "BOOT_STYLE": 4,
+        "LENGTH": 117,
+        "HEEL_HEIGHT": 20,
+        "PATTERN": 73,
+        "SHOULDER_STYLE": 11,
+        "ACTIVE_STYLE": 1,
+        "DANCE_SHOE_STYLE": 2
+      },
+      "category_products": {
+        "Books": 142,
+        "Watches": 136,
+        "Shoes": 148,
+        "Shirts & Tops": 142,
+        "Dresses": 168
+      },
+      "source_sequences": {
+        "title": 736,
+        "description": 1095,
+        "price": 282,
+        "brand": 547,
+        "feature": 6129
+      }
+    },
+    "test": {
+      "sequences": 9027,
+      "products": 716,
+      "tokens": 151950,
+      "unknown_labels": {},
+      "length_errors": 0,
+      "bio_errors": 0,
+      "clusters": 715,
+      "positive_span_counts": {
+        "FORMAT": 17,
+        "TYPE": 298,
+        "FICTION_FORM": 102,
+        "PAGE_COUNT": 2,
+        "REFERENCE_TYPE": 28,
+        "SLEEVE_STYLE": 273,
+        "FASTENING_STYLE": 14,
+        "WATCH_MOVEMENT": 211,
+        "HEEL_HEIGHT": 14,
+        "DISPLAY": 58,
+        "MECHANICAL_MOVEMENT": 59,
+        "SILHOUETTE": 20,
+        "STYLE": 26,
+        "BABY_DEPARTMENT": 2,
+        "PATTERN": 94,
+        "SHAFT_HEIGHT": 28,
+        "ATHLETIC_SHOE_STYLE": 44,
+        "NECKLINE": 161,
+        "HEEL_STYLE": 13,
+        "LENGTH": 88,
+        "BOOT_STYLE": 7,
+        "TOE_STYLE": 8,
+        "SHOULDER_STYLE": 7,
+        "ACTIVE_STYLE": 8
+      },
+      "category_products": {
+        "Books": 126,
+        "Shirts & Tops": 160,
+        "Watches": 137,
+        "Shoes": 154,
+        "Dresses": 139
+      },
+      "source_sequences": {
+        "title": 716,
+        "description": 1051,
+        "brand": 527,
+        "price": 275,
+        "feature": 6458
+      }
+    }
+  },
+  "dataset_sha256": {
+    "train": "e0af53455e5a48bc4ead5ea38dd11aa33fc10916c09e6ce73c1cc7552b69c24d",
+    "val": "019bcb18f70a1ab77acd5d313aa8a20b55c09f63dcb2881e61c0525ae5d7ff8f",
+    "test": "4fe8388ee5481814b748061dad527b492115043763782a818e84bd0ebf71c40b"
+  },
+  "selected_products": 5000,
+  "rejected_overlap_spans": 620,
+  "selected_products_with_parent_asin": 0,
+  "predefined_label_count": 57,
+  "gold_assisted_token_boundaries": true,
+  "annotation_completeness": "unannotated attributes are unknown; flat BIO uses released observed evidence as benchmark gold",
+  "duplicate_grouping_limitation": "exact normalized text and parent ASIN when available; near-duplicate variants may remain",
+  "official_mave_split": false,
+  "model_training_performed": false
+}

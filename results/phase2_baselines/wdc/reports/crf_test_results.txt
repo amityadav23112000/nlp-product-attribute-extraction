@@ -1,0 +1,80 @@
+FINAL CRF OFFICIAL TEST RESULTS
+============================================================
+
+Entity Precision: 0.8408
+Entity Recall: 0.7510
+Micro F1: 0.7934
+Macro F1: 0.7483
+Token Accuracy: 0.9282
+
+PER-ATTRIBUTE RESULTS
+============================================================
+                           precision    recall  f1-score   support
+
+                     BASE     0.8333    0.8333    0.8333        18
+                  BINDING     1.0000    0.4545    0.6250        11
+                    BRAND     0.8873    0.7908    0.8363       239
+                BUS_SPEED     0.6667    0.6667    0.6667         3
+                    CACHE     0.8077    0.8077    0.8077        26
+                 CAPACITY     0.8851    0.7798    0.8291       168
+              CLOCK_SPEED     1.0000    0.8864    0.9398        44
+                  CLOSURE     0.7143    0.3846    0.5000        13
+                    COLOR     0.5600    0.3684    0.4444        38
+                  COLOR_S     0.6903    0.6783    0.6842       115
+                  COOLING     0.9000    0.8182    0.8571        11
+                    DEPTH     0.7812    0.6410    0.7042        39
+                   FLAVOR     0.2000    0.0526    0.0833        19
+                    GAUGE     0.9000    0.8182    0.8571        22
+                   GENDER     1.0000    0.9737    0.9867        38
+               GENERATION     0.9079    0.9324    0.9200        74
+                     HEAT     0.8333    0.8333    0.8333        18
+                   HEIGHT     0.6712    0.6125    0.6405        80
+                INTERFACE     0.9412    0.8807    0.9100       109
+                   LENGTH     0.8636    0.6441    0.7379        59
+             MANUFACTURER     0.9076    0.8278    0.8659       273
+MANUFACTURER_STOCK_NUMBER     0.9701    0.9205    0.9446       176
+                 MATERIAL     0.7123    0.5746    0.6361       181
+               METAL_TYPE     1.0000    0.9649    0.9821        57
+             MODEL_NUMBER     0.9620    0.9157    0.9383        83
+                 MOUNTING     1.0000    0.3333    0.5000         6
+             PACKING_TYPE     0.7727    0.6296    0.6939        27
+            PACK_QUANTITY     0.8500    0.6892    0.7612        74
+               PAGE_YIELD     0.2500    0.1000    0.1429        10
+             PAPER_WEIGHT     0.3333    0.1667    0.2222         6
+              PART_NUMBER     0.8841    0.8632    0.8735       212
+                    PORTS     0.9750    0.8478    0.9070        46
+           PROCESSOR_CORE     1.0000    1.0000    1.0000        12
+       PROCESSOR_QUANTITY     1.0000    0.2727    0.4286        11
+           PROCESSOR_TYPE     0.8333    0.8333    0.8333        30
+             PRODUCT_TYPE     0.7212    0.5990    0.6545       626
+               RETAIL_UPC     1.0000    1.0000    1.0000        48
+         ROTATIONAL_SPEED     0.9884    1.0000    0.9942        85
+                    SHAPE     0.8000    0.4706    0.5926        17
+        SHEET_PERFORATION     0.5000    0.2500    0.3333         4
+                  SHELVES     1.0000    0.1250    0.2222         8
+              SIZE_WEIGHT     0.7083    0.6800    0.6939        25
+                   SPLASH     0.9167    0.9167    0.9167        24
+   STAINLESS_STEEL_SERIES     0.9630    1.0000    0.9811        26
+           STONES_SETTING     1.0000    0.9231    0.9600        13
+      STONES_TOTAL_WEIGHT     1.0000    1.0000    1.0000         3
+              STONES_TYPE     0.9375    0.7895    0.8571        19
+              STONE_SHAPE     1.0000    0.8750    0.9333        16
+     THERMAL_DESIGN_POWER     1.0000    0.9000    0.9474        10
+                  VOLTAGE     0.9375    0.8824    0.9091        17
+                    WIDTH     0.6959    0.7984    0.7437       129
+
+                micro avg     0.8408    0.7510    0.7934      3418
+                macro avg     0.8365    0.7060    0.7483      3418
+             weighted avg     0.8342    0.7510    0.7865      3418
+
+
+PER-SOURCE RESULTS
+title: P=0.8513, R=0.7888, F1=0.8189
+description: P=0.8310, R=0.7179, F1=0.7703
+
+PER-CATEGORY RESULTS
+Computers And Accessories: P=0.9052, R=0.8650, F1=0.8847
+Grocery And Gourmet Food: P=0.7305, R=0.5421, F1=0.6224
+Home And Garden: P=0.7819, R=0.7027, F1=0.7402
+Jewelry: P=0.9451, R=0.9157, F1=0.9302
+Office Products: P=0.7586, R=0.6000, F1=0.6700

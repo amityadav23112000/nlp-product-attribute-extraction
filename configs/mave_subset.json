@@ -1,0 +1,22 @@
+{
+  "dataset": "MAVE",
+  "seed": 42,
+  "category_count": 5,
+  "categories": [],
+  "minimum_products_per_category": 200,
+  "maximum_products_per_category": 1000,
+  "candidate_multiplier": 3,
+  "split_fractions": {"train": 0.70, "val": 0.15, "test": 0.15},
+  "selection": "smallest SHA-256 ranks among valid reconstructed products within each category",
+  "category_selection": "top categories by positive-label product count before metadata reconstruction unless explicitly listed",
+  "split_unit": "connected product groups formed from exact cleaned-text duplicates and parent ASIN when available",
+  "sources": ["title", "description", "feature", "price", "brand"],
+  "positive_and_negative_labels": "merge by product ID; retain explicit empty evidence lists",
+  "invalid_evidence_policy": "exclude product and report the reason; no fuzzy offset repair",
+  "overlap_policy": "flat BIO: prefer longer spans, then attribute name; log rejected annotations",
+  "tokenization": "preserved benchmark regex with evidence-boundary splitting; gold-assisted benchmark only",
+  "sequence_length_policy": "exclude whole products if any paragraph exceeds 512 subwords for either cached BERT or DeBERTa; report exclusions",
+  "length_check_configs": ["configs/bert_selected.json", "configs/deberta_selected.json"],
+  "evaluation": "custom reproducible subset, not the original published MAVE benchmark splits",
+  "status": "initial_preparation_protocol_pending_metadata"
+}

@@ -1,0 +1,10 @@
+{
+  "source_url_without_query": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_v2/metaFiles/All_Amazon_Meta.json.gz",
+  "path": "/scratch/csisnlp_09/data/mave/raw/All_Amazon_Meta.json.gz",
+  "expected_bytes": 12237944088,
+  "status": "downloaded_checksum_recorded",
+  "gzip_crc_verified": true,
+  "bytes": 12237944088,
+  "sha256": "05f8c71ad51a1112c8cbcfc49040fe06f507d3013fd027e0a4f9fbab6c8419df",
+  "gzip_layers_verified": 2
+}

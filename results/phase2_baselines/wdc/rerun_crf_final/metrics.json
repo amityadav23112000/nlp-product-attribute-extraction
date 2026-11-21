@@ -1,0 +1,344 @@
+{
+  "mode": "final",
+  "params": {
+    "algorithm": "lbfgs",
+    "c1": 0.1,
+    "c2": 0.1,
+    "max_iterations": 150,
+    "all_possible_transitions": true
+  },
+  "scores": {
+    "precision": 0.840812315754995,
+    "recall": 0.7510239906377999,
+    "micro_f1": 0.7933858754442898,
+    "macro_f1": 0.7483388167979119
+  },
+  "per_attribute": {
+    "BASE": {
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.8333333333333334,
+      "support": 18.0
+    },
+    "BINDING": {
+      "precision": 1.0,
+      "recall": 0.45454545454545453,
+      "f1-score": 0.625,
+      "support": 11.0
+    },
+    "BRAND": {
+      "precision": 0.8873239436619719,
+      "recall": 0.7907949790794979,
+      "f1-score": 0.8362831858407079,
+      "support": 239.0
+    },
+    "BUS_SPEED": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6666666666666666,
+      "support": 3.0
+    },
+    "CACHE": {
+      "precision": 0.8076923076923077,
+      "recall": 0.8076923076923077,
+      "f1-score": 0.8076923076923077,
+      "support": 26.0
+    },
+    "CAPACITY": {
+      "precision": 0.8851351351351351,
+      "recall": 0.7797619047619048,
+      "f1-score": 0.829113924050633,
+      "support": 168.0
+    },
+    "CLOCK_SPEED": {
+      "precision": 1.0,
+      "recall": 0.8863636363636364,
+      "f1-score": 0.9397590361445783,
+      "support": 44.0
+    },
+    "CLOSURE": {
+      "precision": 0.7142857142857143,
+      "recall": 0.38461538461538464,
+      "f1-score": 0.5,
+      "support": 13.0
+    },
+    "COLOR": {
+      "precision": 0.56,
+      "recall": 0.3684210526315789,
+      "f1-score": 0.4444444444444444,
+      "support": 38.0
+    },
+    "COLOR_S": {
+      "precision": 0.6902654867256637,
+      "recall": 0.6782608695652174,
+      "f1-score": 0.6842105263157895,
+      "support": 115.0
+    },
+    "COOLING": {
+      "precision": 0.9,
+      "recall": 0.8181818181818182,
+      "f1-score": 0.8571428571428572,
+      "support": 11.0
+    },
+    "DEPTH": {
+      "precision": 0.78125,
+      "recall": 0.6410256410256411,
+      "f1-score": 0.7042253521126761,
+      "support": 39.0
+    },
+    "FLAVOR": {
+      "precision": 0.2,
+      "recall": 0.05263157894736842,
+      "f1-score": 0.08333333333333333,
+      "support": 19.0
+    },
+    "GAUGE": {
+      "precision": 0.9,
+      "recall": 0.8181818181818182,
+      "f1-score": 0.8571428571428572,
+      "support": 22.0
+    },
+    "GENDER": {
+      "precision": 1.0,
+      "recall": 0.9736842105263158,
+      "f1-score": 0.9866666666666666,
+      "support": 38.0
+    },
+    "GENERATION": {
+      "precision": 0.9078947368421053,
+      "recall": 0.9324324324324325,
+      "f1-score": 0.92,
+      "support": 74.0
+    },
+    "HEAT": {
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.8333333333333334,
+      "support": 18.0
+    },
+    "HEIGHT": {
+      "precision": 0.6712328767123288,
+      "recall": 0.6125,
+      "f1-score": 0.6405228758169935,
+      "support": 80.0
+    },
+    "INTERFACE": {
+      "precision": 0.9411764705882353,
+      "recall": 0.8807339449541285,
+      "f1-score": 0.909952606635071,
+      "support": 109.0
+    },
+    "LENGTH": {
+      "precision": 0.8636363636363636,
+      "recall": 0.6440677966101694,
+      "f1-score": 0.7378640776699029,
+      "support": 59.0
+    },
+    "MANUFACTURER": {
+      "precision": 0.9076305220883534,
+      "recall": 0.8278388278388278,
+      "f1-score": 0.8659003831417624,
+      "support": 273.0
+    },
+    "MANUFACTURER_STOCK_NUMBER": {
+      "precision": 0.9700598802395209,
+      "recall": 0.9204545454545454,
+      "f1-score": 0.9446064139941691,
+      "support": 176.0
+    },
+    "MATERIAL": {
+      "precision": 0.7123287671232876,
+      "recall": 0.574585635359116,
+      "f1-score": 0.636085626911315,
+      "support": 181.0
+    },
+    "METAL_TYPE": {
+      "precision": 1.0,
+      "recall": 0.9649122807017544,
+      "f1-score": 0.9821428571428572,
+      "support": 57.0
+    },
+    "MODEL_NUMBER": {
+      "precision": 0.9620253164556962,
+      "recall": 0.9156626506024096,
+      "f1-score": 0.9382716049382716,
+      "support": 83.0
+    },
+    "MOUNTING": {
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.5,
+      "support": 6.0
+    },
+    "PACKING_TYPE": {
+      "precision": 0.7727272727272727,
+      "recall": 0.6296296296296297,
+      "f1-score": 0.6938775510204083,
+      "support": 27.0
+    },
+    "PACK_QUANTITY": {
+      "precision": 0.85,
+      "recall": 0.6891891891891891,
+      "f1-score": 0.7611940298507462,
+      "support": 74.0
+    },
+    "PAGE_YIELD": {
+      "precision": 0.25,
+      "recall": 0.1,
+      "f1-score": 0.14285714285714288,
+      "support": 10.0
+    },
+    "PAPER_WEIGHT": {
+      "precision": 0.3333333333333333,
+      "recall": 0.16666666666666666,
+      "f1-score": 0.2222222222222222,
+      "support": 6.0
+    },
+    "PART_NUMBER": {
+      "precision": 0.8840579710144928,
+      "recall": 0.8632075471698113,
+      "f1-score": 0.8735083532219571,
+      "support": 212.0
+    },
+    "PORTS": {
+      "precision": 0.975,
+      "recall": 0.8478260869565217,
+      "f1-score": 0.9069767441860466,
+      "support": 46.0
+    },
+    "PROCESSOR_CORE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 12.0
+    },
+    "PROCESSOR_QUANTITY": {
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "f1-score": 0.42857142857142855,
+      "support": 11.0
+    },
+    "PROCESSOR_TYPE": {
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.8333333333333334,
+      "support": 30.0
+    },
+    "PRODUCT_TYPE": {
+      "precision": 0.7211538461538461,
+      "recall": 0.5990415335463258,
+      "f1-score": 0.6544502617801047,
+      "support": 626.0
+    },
+    "RETAIL_UPC": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 48.0
+    },
+    "ROTATIONAL_SPEED": {
+      "precision": 0.9883720930232558,
+      "recall": 1.0,
+      "f1-score": 0.9941520467836257,
+      "support": 85.0
+    },
+    "SHAPE": {
+      "precision": 0.8,
+      "recall": 0.47058823529411764,
+      "f1-score": 0.5925925925925927,
+      "support": 17.0
+    },
+    "SHEET_PERFORATION": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1-score": 0.3333333333333333,
+      "support": 4.0
+    },
+    "SHELVES": {
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1-score": 0.2222222222222222,
+      "support": 8.0
+    },
+    "SIZE_WEIGHT": {
+      "precision": 0.7083333333333334,
+      "recall": 0.68,
+      "f1-score": 0.6938775510204083,
+      "support": 25.0
+    },
+    "SPLASH": {
+      "precision": 0.9166666666666666,
+      "recall": 0.9166666666666666,
+      "f1-score": 0.9166666666666666,
+      "support": 24.0
+    },
+    "STAINLESS_STEEL_SERIES": {
+      "precision": 0.9629629629629629,
+      "recall": 1.0,
+      "f1-score": 0.9811320754716981,
+      "support": 26.0
+    },
+    "STONES_SETTING": {
+      "precision": 1.0,
+      "recall": 0.9230769230769231,
+      "f1-score": 0.9600000000000001,
+      "support": 13.0
+    },
+    "STONES_TOTAL_WEIGHT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "STONES_TYPE": {
+      "precision": 0.9375,
+      "recall": 0.7894736842105263,
+      "f1-score": 0.8571428571428572,
+      "support": 19.0
+    },
+    "STONE_SHAPE": {
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1-score": 0.9333333333333333,
+      "support": 16.0
+    },
+    "THERMAL_DESIGN_POWER": {
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1-score": 0.9473684210526316,
+      "support": 10.0
+    },
+    "VOLTAGE": {
+      "precision": 0.9375,
+      "recall": 0.8823529411764706,
+      "f1-score": 0.9090909090909091,
+      "support": 17.0
+    },
+    "WIDTH": {
+      "precision": 0.6959459459459459,
+      "recall": 0.7984496124031008,
+      "f1-score": 0.7436823104693141,
+      "support": 129.0
+    },
+    "micro avg": {
+      "precision": 0.840812315754995,
+      "recall": 0.7510239906377999,
+      "f1-score": 0.7933858754442898,
+      "support": 3418.0
+    },
+    "macro avg": {
+      "precision": 0.8365128943728325,
+      "recall": 0.706004799191854,
+      "f1-score": 0.7483388167979119,
+      "support": 3418.0
+    },
+    "weighted avg": {
+      "precision": 0.83419171465531,
+      "recall": 0.7510239906377999,
+      "f1-score": 0.7864822805451754,
+      "support": 3418.0
+    }
+  },
+  "train_sequences": 2132,
+  "seconds": 156.8791515827179
+}

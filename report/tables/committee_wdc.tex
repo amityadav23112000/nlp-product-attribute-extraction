@@ -1,0 +1,14 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{llrrrr}\toprule
+Split & System & P & R & micro-F1 & SD \\\midrule
+Val & DeBERTa & 82.55 & 86.42 & 84.44 & 0.40 \\
+Val & CRF & 83.40 & 74.94 & 78.94 & -- \\
+Val & BERT & 78.69 & 82.60 & 80.60 & 0.60 \\
+Val & \textbf{CPEC (ours)} & 87.54 & 82.56 & \textbf{84.98} & 0.52 \\
+\midrule
+Test & DeBERTa & 84.36 & 87.23 & 85.77 & 0.40 \\
+Test & CRF & 84.08 & 75.10 & 79.34 & -- \\
+Test & BERT & 81.28 & 85.11 & 83.15 & 0.18 \\
+Test & \textbf{CPEC (ours)} & 89.30 & 84.81 & \textbf{86.99} & 0.09 \\
+\bottomrule\end{tabular}
+\caption{WDC-PAVE entity-level results (strict span micro-F1, \%). Mean over seeds 42/43/44 (CRF is a single model). Vote thresholds selected on validation: head=2, medium=2, tail=2, extreme tail=3.}\label{tab:cpec_wdc}\end{table}

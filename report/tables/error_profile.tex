@@ -1,0 +1,9 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{llrrrrr}\toprule
+Data & System & Correct & Spurious & Boundary & Wrong attr. & Missed \\\midrule
+WDC & DeBERTa & 2978 & 212 & 199 & 155 & 147 \\
+WDC & CPEC & 2898 & 135 & 114 & 94 & 321 \\
+MAVE & DeBERTa & 1382 & 280 & 33 & 29 & 144 \\
+MAVE & CPEC & 1427 & 348 & 25 & 29 & 104 \\
+\bottomrule\end{tabular}
+\caption{Span-level error profile on the test sets (seed 42). Boundary = overlapping span with the right attribute but wrong extent.}\label{tab:errors}\end{table}

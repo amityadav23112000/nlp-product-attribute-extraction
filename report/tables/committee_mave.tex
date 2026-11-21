@@ -1,0 +1,12 @@
+\begin{table}[t]\centering\small
+\begin{tabular}{llrrrr}\toprule
+Split & System & P & R & micro-F1 & SD \\\midrule
+Val & DeBERTa & 78.01 & 87.84 & 82.62 & 0.47 \\
+Val & CRF & 80.13 & 80.92 & 80.53 & -- \\
+Val & \textbf{CPEC (ours)} & 75.98 & 90.89 & \textbf{82.76} & 0.45 \\
+\midrule
+Test & DeBERTa & 80.17 & 88.16 & 83.97 & 0.44 \\
+Test & CRF & 81.23 & 80.40 & 80.81 & -- \\
+Test & \textbf{CPEC (ours)} & 77.77 & 90.52 & \textbf{83.66} & 0.12 \\
+\bottomrule\end{tabular}
+\caption{MAVE pilot entity-level results. Only two paradigms (CRF, DeBERTa) are available as voters. Mean over seeds 42/43/44 (CRF is a single model). Vote thresholds selected on validation: head=1, medium=1, tail=1, extreme tail=1.}\label{tab:cpec_mave}\end{table}
